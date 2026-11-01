@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.8)
+project(robot_sensors)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY camera lidar imu ultrasonic config DESTINATION share/${PROJECT_NAME} OPTIONAL)
+ament_package()

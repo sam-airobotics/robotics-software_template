@@ -1,0 +1,14 @@
+services:
+  ros2-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: robotics-software-template:jazzy
+    network_mode: host
+    ipc: host
+    environment:
+      ROS_DOMAIN_ID: ${ROS_DOMAIN_ID:-0}
+    volumes:
+      - .:/workspace
+    stdin_open: true
+    tty: true

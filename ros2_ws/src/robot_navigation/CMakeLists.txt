@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.8)
+project(robot_navigation)
+find_package(ament_cmake REQUIRED)
+install(DIRECTORY config maps behavior_trees launch waypoints DESTINATION share/${PROJECT_NAME} OPTIONAL)
+ament_package()
